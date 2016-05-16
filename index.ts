@@ -29,11 +29,11 @@ let afterAllWithPromise = (action: () => Promise<any> | any, timeout?: number) =
   afterAll(promising(action), timeout);
 };
 
-let invert = (promise: Promise<any>) => {
-  return promise.then(resolution => {
-    return new Error(`Promise should be rejected, but it is resolved with: ${resolution}`);
-  }, err => err);
-};
+let invert = (promise: Promise<any>) =>
+  promise.then(
+    resolution => Promise.reject(new Error(`Promise should be rejected, but it is resolved with: ${resolution}`)),
+    err => err
+  );
 
 export {
   itWithPromise as it,

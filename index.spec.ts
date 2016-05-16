@@ -50,6 +50,17 @@ describe("async", () => {
       running = false;
     });
 
+    it("should reject if the promise was resolved", () => {
+      let error: Error;
+      try {
+        await(invert(new Promise(resolve => setTimeout(() => resolve("foo")))));
+      } catch (err) {
+        error = err;
+      }
+      expect(error.message).toEqual("Promise should be rejected, but it is resolved with: foo");
+      running = false;
+    });
+
   });
 
 });
