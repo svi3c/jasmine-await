@@ -1,6 +1,6 @@
 {
   "name": "jasmine-await",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Integrates asyncawait support into jasmine to write more concise specs",
   "scripts": {
     "prepublish": "npm run check && npm run test && tsc",
