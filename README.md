@@ -1,12 +1,20 @@
 # jasmine-await
 
-[![build status](https://api.travis-ci.org/svi3c/jasmine-await.svg)](https://travis-ci.org/svi3c/jasmine-await)
-
 This project adds [asyncawait](https://github.com/yortus/asyncawait) support to
 [jasmine](https://www.npmjs.com/package/jasmine).
 
 It extends the functions `it()`, `beforeEach()`, `afterEach()`, `beforeAll()` and `afterAll()` and wraps
 them in the `async()` function. So you can always use `await()` to wait for a promise's resolution or rejection.
+
+## Deprecation notice
+
+This package is **deprecated**. Please use [jasmine-promise](https://github.com/svi3c/jasmine-promise) instead.
+
+jasmine-promise is not bound to the asyncawait library. Of course you can still use this library,
+but if you have a runtime with native support for ES2017 async functions
+([node 7.6+](http://node.green/#ES2017-features-async-functions)), you don't need it any more.
+Since async functions return promises, async functions are covered by jasmine-promise as well:
+Simply declare your spec functions as `async`.
 
 ## Installation
 
