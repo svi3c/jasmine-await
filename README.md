@@ -8,7 +8,7 @@ them in the `async()` function. So you can always use `await()` to wait for a pr
 
 ## Deprecation notice
 
-This package is **deprecated**. Please use [jasmine-promise](https://github.com/svi3c/jasmine-promise) instead.
+This package is **deprecated**. Please use [jasmine-promise-wrapper](https://github.com/svi3c/jasmine-promise-wrapper) instead.
 
 jasmine-promise is not bound to the asyncawait library. Of course you can still use this library,
 but if you have a runtime with native support for ES2017 async functions
